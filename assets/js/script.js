@@ -37,3 +37,22 @@ const isLowercase = confirm(“Do you want to use lowercase?“);
     alert("please choose atleast one of the options");
     return;
   }
+
+    //return function
+  //if statement for return
+
+
+  const choices = [];
+  
+  if (isLowercase) {
+    choices.push(lowerCase);
+  }
+  if (isUppercase) {
+    choices.push(uppercase);
+  }
+  if (isNumeric) {
+    choices.push(numeric);
+  }
+  if (isSpecial) {
+    choices.push(special);
+  }
