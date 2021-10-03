@@ -28,3 +28,12 @@ if (passwordLength<8 || passwordLength<= 128) {
 }
 
 // functions to determine what character user wants to use
+const isLowercase = confirm(“Do you want to use lowercase?“);
+  const isUppercase = confirm(“Do you want to use uppercase?“);
+  const isNumeric = confirm(“Do you want to use numeric?“);
+  const isSpecial = confirm(“Do you want to use special?“);
+
+  if (!isLowercase && !isUppercase && !isNumeric && !isSpecial) {
+    alert("please choose atleast one of the options");
+    return;
+  }
