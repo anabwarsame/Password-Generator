@@ -43,7 +43,7 @@ const isLowercase = confirm(“Do you want to use lowercase?“);
 
 
   const choices = [];
-  
+
   if (isLowercase) {
     choices.push(lowerCase);
   }
@@ -56,3 +56,16 @@ const isLowercase = confirm(“Do you want to use lowercase?“);
   if (isSpecial) {
     choices.push(special);
   }
+
+  // generate random password
+  for (let i = 0; i < 10; i++) {
+    // get random choice index
+    const randomChoiceIndex = Math.floor(Math.random() * choices.length);
+    // get random characters
+    const randomCharacters = choices[randomChoiceIndex];
+    password += randomCharacters.charAt(
+      Math.floor(Math.random() * randomCharacters.length)
+    );
+  }
+  return password;
+}
