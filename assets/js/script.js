@@ -14,7 +14,7 @@ function generatePassword() {
   // if password is a number and within range of 8 and 128 do rest else alert and return “”
   console.log(passwordLength);
 
-  if (passwordLength < 8 || passwordLength <= 128) {
+  if (passwordLength < 8 || passwordLength > 128) {
     alert("please choose a different length");
     return passwordLength;
   } else if (passwordLength >= 8 || passwordLength <= 128) {
@@ -27,7 +27,7 @@ function generatePassword() {
   const isSpecial = confirm("Do you want to use special?");
 
   if (!isLowercase && !isUppercase && !isNumeric && !isSpecial) {
-    alert("please choose atleast one of the options");
+    alert("please choose at least one of the options");
     return;
   }
 
